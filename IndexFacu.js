@@ -16,4 +16,7 @@ const menuLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
     menuLinks.addEventListener("click", function(){
       navMenu.classList.remove("nav-menu_visible");
     })
+
+    // const SUBnavToggle = document.querySelectorAll(".SUBmenubtn");
+
   });

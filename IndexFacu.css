@@ -1,152 +1,245 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    padding: 90px 20px 0;
-  }
-  
-  .header {
-    background-color: rgb(202, 97, 28);
-    height: 120px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 992px;
-    margin: auto;
-  }
-  
-  .nav-link {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .logo {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 0 30px;
-    line-height: 60px;
-  }
-  
-  .nav-menu {
-    display: flex;
-    margin-right: 40px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 90px 20px 0;
+}
+
+.header {
+  background-color: rgb(202, 97, 28);
+  height: 120px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 992px;
+  margin: auto;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 30px;
+  line-height: 60px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 30px;
+  margin: 0 10px;
+  line-height: 80px;
+  /* text-transform: uppercase; */
+  width: max-content;
+}
+
+.nav-menu-link { 
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: rgba(0, 0, 0, 0.267);
+  transition: 0.5s;
+}
+
+/* TOGGLE */
+.nav-toggle {
+  color: black;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-SUBmenu {
     list-style: none;
-  }
-  
-  .nav-menu-item {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.nav-SUBmenu-link {
+    display: block;
+    padding: 20px;
+    color: black;
     font-size: 30px;
-    margin: 0 10px;
-    line-height: 80px;
-    width: max-content;
+    text-decoration: none;
+    }
+
+.nav-SUBmenu .nav-SUBmenu-link {
+  background: #a37f5d;
+  padding-left: 30px;
+}
+
+.containerSUBmenu {
+    position: relative;
+}
+
+.nav-SUBmenu {
+    position: absolute;
+    top: 120px;
+    width: 200px;
+    overflow: visible;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.containerSUBmenu:hover .nav-SUBmenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-SUBmenu-link:hover {
+  background-color: rgba(0, 0, 0, 0.801);
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
   }
 
-  .nav-menu-link { 
-    padding: 8px 12px;
-    border-radius: 3px;
+  .header {
+    height: 60px;
   }
-  
-  .nav-menu-link:hover,
-  .nav-menu-link_active {
-    background-color: rgba(0, 0, 0, 0.267);
-    transition: 0.5s;
-  }
-  
-  .nav-toggle {
-    color: black;
-    background: none;
-    border: none;
-    font-size: 30px;
+
+  .logo {
+    font-size: 25px;
     padding: 0 20px;
     line-height: 60px;
-    cursor: pointer;
-    display: none;
   }
-  
-  @media (max-width: 768px) {
-    body {
-      padding-top: 70px;
-    }
-  
-    .header {
-      height: 60px;
-    }
-  
-    .logo {
-      font-size: 25px;
-      padding: 0 20px;
-      line-height: 60px;
-    }
-  
-    .nav-menu {
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      background-color: #a37f5d;
-      position: fixed;
-      top: 60px;
-      width: 100%;
-      padding: 20px 0;
-  
-      height: calc(100% - 60px);
-      overflow-y: auto;
-  
-      left: 100%;
-      transition: left 0.3s;
-    }
-  
-    .nav-menu-item {
-      line-height: 70px;
-    }
-  
-    .nav-menu-link:hover,
-    .nav-menu-link_active {
-      background: none;
-    }
-  
-    .nav-toggle {
-      display: block;
-    }
-  
-    .nav-menu_visible {
-      left: 0;
-    }
-  
-    .nav-toggle:focus:not(:focus-visible) {
-      outline: none;
-    }
 
-    .open-menu,
-    .close-menu {
-      display: block;
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-  
-    .close-menu {
-      align-self: flex-end;
-      padding: 20px 15px;
-    }
-  
-    .menu_opened {
-      opacity: 1;
-      pointer-events: all;
-    }
-  
-    .open-menu:focus:not(:focus-visible),
-    .close-menu:focus:not(:focus-visible) {
-      outline: none;
-    }
-    
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #a37f5d;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    /* color: rgb(202, 97, 28); */
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    padding: 20px 15px;
+  }
+
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
   }
   
-  
+  .nav-SUBmenu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.4s;
+  }
+
+  .nav-SUBmenu-link {
+      display: block;
+      padding: 20px;
+      color: black;
+      font-size: 30px;
+      text-decoration: none;
+      }
+
+  .nav-SUBmenu .nav-SUBmenu-link {
+    background: #a37f5d;
+    padding-left: 30px;
+  }
+
+  .containerSUBmenu {
+      position: relative;
+  }
+
+  .nav-SUBmenu {
+      position: absolute;
+      top: 70px;
+      width: 200px;
+      overflow: visible;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+  }
+
+  .containerSUBmenu:hover .nav-SUBmenu {
+      opacity: 1;
+      visibility: visible;
+  }
+
+  .nav-SUBmenu-link:hover {
+    background-color: rgba(0, 0, 0, 0.801);
+    transition: 0.5s;
+  }
+}
+
