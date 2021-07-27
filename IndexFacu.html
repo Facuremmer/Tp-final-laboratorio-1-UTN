@@ -46,6 +46,10 @@
         </li>
 
         <li class="nav-menu-item">
+          <a href="#ElegirImagen" class="nav-menu-link nav-link">Eleji tu imagen!</a>
+        </li>
+
+        <li class="nav-menu-item">
           <a href="#Ustedes" class="nav-menu-link nav-link">Ustedes</a>
         </li>
 
@@ -213,6 +217,47 @@
      Para los demas productos pedimos una compra minima para poder personalizarlos, porfavor consultar.
  </p>
  
+ <h2>Elejí tu imagen! </h2>
+ <p> En esta sección podes elegir la imagen que quieras para ponerlas en la funda que vos elijas!</p>
+ 
+ <!-- API -->
+ <div id="app"> 
+<script src = "IndexFacu.js" type="module"></script>
+<form>
+  <!-- ESTO SE PODRIA HACER ES CSS -->
+  <div class = "row">
+    <div class = "form-group col-md-8">
+      <input
+        type = "text"
+        class = "form-control form-control-lg"
+        id = "busqueda"
+        placeholder = "Inserte una palabra para buscar imágenes"
+        />
+    </div>
+    <!-- BOTON BUSCAR -->
+    <div class = "form-group col-md-4">
+      <input
+        type="button"
+        class="btn btn-lg btn-danger btn-block"
+        value="Buscar"
+        onclick="cargarImagenes()"
+      />
+    </div>
+  </div>
+
+</form>
+  <!-- PARA MOSTRAR LAS IMAGENES -->
+  <div class = "col-12 p-5 row" id = "listadoImagenes">
+
+  </div>
+
+  <!-- BOTONES DE PAGINACION PARA IR ADELANTE Y ATRAS -->
+  <div id="paginacion">
+
+  </div>
+
+ </div>
+
  <h4>Nuestro logo:</h4>
  <div class="figure" id="Contacto">
  <img src="Foto logo.jpeg" alt="No se porque al insertar una imagen desde un archivo si lo abro desde otra compu pasa esto." width="800" height="650" title="Logo de Toco Madera">
