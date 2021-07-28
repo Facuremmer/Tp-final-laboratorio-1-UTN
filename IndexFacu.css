@@ -3,14 +3,15 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: sans-serif;
-  padding: 90px 20px 0;
+  padding: 80px 20px 0;
 }
 
 .header {
   background-color: rgb(202, 97, 28);
-  height: 120px;
+  height: 65px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -25,15 +26,24 @@ body {
 }
 
 .nav-link {
+  position: relative;
+  bottom: 75px;
   color: black;
   text-decoration: none;
 }
 
 .logo {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
-  padding: 0 30px;
+  padding: 0 20px;
   line-height: 60px;
+  position: relative;
+  right: 550px;
+  bottom: 0px;
+}
+
+.logo:hover {
+  color: black;
 }
 
 .nav-menu {
@@ -53,15 +63,20 @@ body {
 .nav-menu-link { 
   padding: 8px 12px;
   border-radius: 3px;
+  position: relative;
+  left: 200px;
 }
 
 .nav-menu-link:hover,
 .nav-menu-link_active {
   background-color: rgba(0, 0, 0, 0.267);
-  transition: 0.5s;
+  transition: 0.3s;
+  height: 80px;
+  width: auto;
+  color: black;
 }
 
-/* TOGGLE */
+/*  /* TOGGLE */
 .nav-toggle {
   color: black;
   background: none;
@@ -70,7 +85,7 @@ body {
   padding: 0 20px;
   line-height: 60px;
   cursor: pointer;
-  display: none;
+  display: none; 
 }
 
 .nav-SUBmenu {
@@ -84,15 +99,16 @@ body {
 
 .nav-SUBmenu-link {
     display: block;
-    padding: 20px;
     color: black;
     font-size: 30px;
     text-decoration: none;
+    position: relative;
+    left: 200px;
     }
 
 .nav-SUBmenu .nav-SUBmenu-link {
   background: #a37f5d;
-  padding-left: 30px;
+  padding-left: 17px;
 }
 
 .containerSUBmenu {
@@ -101,8 +117,8 @@ body {
 
 .nav-SUBmenu {
     position: absolute;
-    top: 120px;
-    width: 200px;
+    top: 80px;
+    width: 159px;
     overflow: visible;
     z-index: 1000;
     opacity: 0;
@@ -116,8 +132,16 @@ body {
 
 .nav-SUBmenu-link:hover {
   background-color: rgba(0, 0, 0, 0.801);
-  transition: 0.5s;
+  transition: 0.3s;
+  color: black;
 }
+
+.esconder {
+  visibility: hidden;
+   opacity: 0;
+}
+
+
 
 @media (max-width: 768px) {
   body {
@@ -132,6 +156,8 @@ body {
     font-size: 25px;
     padding: 0 20px;
     line-height: 60px;
+    position: relative;
+    right: 0px;
   }
 
   .nav-menu {
@@ -152,6 +178,9 @@ body {
   }
 
   .nav-menu-item {
+    position: relative;
+    right: 190px;
+    bottom: -70px;
     line-height: 70px;
   }
 
@@ -173,7 +202,7 @@ body {
     outline: none;
   }
 
-  .open-menu,
+  /* .open-menu,
   .close-menu {
     display: block;
     border: none;
@@ -184,9 +213,9 @@ body {
   .close-menu {
     align-self: flex-end;
     padding: 20px 15px;
-  }
+  } */
 
-  .menu_opened {
+  /* .menu_opened {
     opacity: 1;
     pointer-events: all;
   }
@@ -194,7 +223,7 @@ body {
   .open-menu:focus:not(:focus-visible),
   .close-menu:focus:not(:focus-visible) {
     outline: none;
-  }
+  } */
   
   .nav-SUBmenu {
       list-style: none;
@@ -241,5 +270,12 @@ body {
     background-color: rgba(0, 0, 0, 0.801);
     transition: 0.5s;
   }
+
+  .esconderCards {
+   visibility: hidden;
+   opacity: 0;
+ }
+ 
 }
+
 
