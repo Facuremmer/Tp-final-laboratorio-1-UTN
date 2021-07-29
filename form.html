@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     
+     <link rel="stylesheet" href="formulario.css">
+     <title>Formulario Toco Madera</title>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-light" style="background-color: #cf8d8dbc;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="Foto logo.jpeg" alt="Logo Toco Madera" width="80" height="auto" class="d-inline-block align-text-centre">
+            Toco Madera
+          </a>
+        </div>
+      </nav>
+      <h3>Complete el siguiente formulario:</h3>
+      <!-- FORM -->
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputname" class="form-label">Nombre</label>
+          <input type="email" class="form-control" id="inputname">
+        </div>
+        <div class="col-md-6">
+          <label for="inputSurname" class="form-label">Apellido</label>
+          <input type="password" class="form-control" id="inputSurname">
+        </div>
+        <div class="col-12">
+          <label for="inputPhone" class="form-label">Celular</label>
+          <input type="numer" class="form-control" id="inputPhone" placeholder="3442647859">
+        </div>
+        <div class="col-12">
+          <label for="inputCity" class="form-label">Ciudad</label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Concepción del Uruguay">
+        </div>
+        <div class="col-md-12">
+          <label for="inputURL" class="form-label"> URL</label>
+          <input type="url" class="form-control" id="inputURL">
+        </div>
+        <div class="col-md-12">
+          <label for="inputTipoMadera" class="form-label">Tipo de madera</label>
+          <select id="inputState" class="form-select">
+            <option selected>Tipo de madera</option>
+            <option>Paraiso</option>
+            <option>Cedro</option>
+            <option>Ocelot</option>
+            <option>Incienso</option>
+          </select>
+        </div>
+      </form>
+
+    <!-- Button trigger modal -->
+    <div class=botonEnviarDatos>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Enviar datos
+      </button>
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">DATOS ENVIADOS CON ÉXITO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Los datos introducidos fueron enviados con éxito. En los próximos días nos estaremos comunicando para confirmarlos. Muchas gracias!
+          Te invitamos a que veas mas productos en nuestra página de Instagram
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-primary" href="https://www.instagram.com/tocomadera.cdelu/" role="button">Ir a Instagram</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- ---- -->
+
+
+        
+    </div>  
+  </div>
+</div> 
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  </body>
+</html>
