@@ -7,7 +7,6 @@
 body {
   font-family: sans-serif;
   padding: 80px 20px 0;
-  background-color: burlywood;
 }
 
 .header {
@@ -43,7 +42,6 @@ body {
   bottom: 0px;
 }
 
-/* Cuando el logo esta activo se aplica la propiedad. */
 .logo:hover {
   color: black;
 }
@@ -58,6 +56,7 @@ body {
   font-size: 30px;
   margin: 0 10px;
   line-height: 80px;
+  /* text-transform: uppercase; */
   width: max-content;
 }
 
@@ -126,7 +125,6 @@ body {
     visibility: hidden;
 }
 
-/* Si containerSUBmen esta activo, ahi le aplica las propiedades a nav-SUBmenu. */
 .containerSUBmenu:hover .nav-SUBmenu {
     opacity: 1;
     visibility: visible;
@@ -138,15 +136,13 @@ body {
   color: black;
 }
 
-.figure {
-  font-size: 20px;
+.esconder {
+  visibility: hidden;
+   opacity: 0;
 }
 
-.texto {
-  font-size: 20px;
-}
 
-/* Aplica para pantallas con un tamaño maximo de 768px. */
+
 @media (max-width: 768px) {
   body {
     padding-top: 70px;
@@ -191,6 +187,7 @@ body {
   .nav-menu-link:hover,
   .nav-menu-link_active {
     background: none;
+    /* color: rgb(202, 97, 28); */
   }
 
   .nav-toggle {
@@ -201,10 +198,32 @@ body {
     left: 0;
   }
 
- /* Cuando nav toggle tenga el foco pero ese foco sea de tipo "focus-visible" se aplica la propiedad */
   .nav-toggle:focus:not(:focus-visible) {
     outline: none;
   }
+
+  /* .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    padding: 20px 15px;
+  } */
+
+  /* .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  } */
   
   .nav-SUBmenu {
       list-style: none;
@@ -251,6 +270,11 @@ body {
     background-color: rgba(0, 0, 0, 0.801);
     transition: 0.5s;
   }
+
+  .esconderCards {
+   visibility: hidden;
+   opacity: 0;
+ }
  
 }
 

@@ -1,31 +1,4 @@
-// MENU RESPONSIVE
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
-
-// Cuando sucede el evento "click" en el nav toggle (Simbolo del menu) se despliega el menu gracias al estilo "nav-menu_visible"
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("nav-menu_visible");
-
- /*  Bucle para la opción que tiene el navegador para gente no vidente. 
-  Si la clase "navMenu" contiene a "nav-menu_visible" esta extencion dirá cerrar menu y si no la tiene dirá abrir menu. */
-
-  if (navMenu.classList.contains("nav-menu_visible")) {
-    navToggle.setAttribute("aria-label", "Cerrar menú");
-  } else {
-    navToggle.setAttribute("aria-label", "Abrir menú");
-  }
-});
-
-// Cuando hacemos click en cualquier categoria del SUB menu, hacemos que se cierre el menu entero borrando el "nav-menu_viisble".
-const menuLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-  menuLinks.forEach(menuLinks => {
-    menuLinks.addEventListener("click", function(){
-      navMenu.classList.remove("nav-menu_visible");
-    })
-
-  });
-
-// API
+  // API
 const cargarImagenes=async()=>{
   // RECOGEMOS LO QUE INGRESO EL USUARIO
   let input=document.querySelector("#busqueda").value;
@@ -85,14 +58,9 @@ setTimeout(()=>{
 }
 ,3000)
 
-
-
-
   });
-
-
-
 }
+
 
 
 
